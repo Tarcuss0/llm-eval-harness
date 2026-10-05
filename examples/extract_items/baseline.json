@@ -1,0 +1,344 @@
+{
+  "name": "extract_items",
+  "started_at": "2026-10-05T14:38:32+00:00",
+  "config_path": "examples\\extract_items",
+  "aggregates": {
+    "json_valid": 1.0,
+    "items_overlap": 0.9,
+    "fields_match": 0.7777777777777778,
+    "mean_latency_ms": 0.026669999351724982,
+    "p95_latency_ms": 0.09147999735432663,
+    "cost_per_case_usd": 3.3375e-05,
+    "total_cost_usd": 0.00033375000000000006,
+    "pass_rate": 0.7,
+    "errors": 0.0
+  },
+  "threshold_failures": [],
+  "cases": [
+    {
+      "case_id": "simple-3",
+      "tags": [
+        "простое"
+      ],
+      "scores": {
+        "json_valid": 1.0,
+        "items_overlap": 1.0,
+        "fields_match": 1.0
+      },
+      "latency_ms": 0.15249999705702066,
+      "cost_usd": 3.7199999999999996e-05,
+      "stability": null,
+      "outputs": [
+        {
+          "items": [
+            {
+              "name": "Кондиционер настенный",
+              "qty": 4,
+              "unit": "шт"
+            },
+            {
+              "name": "Труба медная",
+              "qty": 30,
+              "unit": "м"
+            },
+            {
+              "name": "Кронштейн",
+              "qty": 4,
+              "unit": "шт"
+            }
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "case_id": "dash-separated",
+      "tags": [
+        "простое"
+      ],
+      "scores": {
+        "json_valid": 1.0,
+        "items_overlap": 1.0,
+        "fields_match": 1.0
+      },
+      "latency_ms": 0.0168999977177009,
+      "cost_usd": 2.88e-05,
+      "stability": null,
+      "outputs": [
+        {
+          "items": [
+            {
+              "name": "Сплит-система",
+              "qty": 2,
+              "unit": "шт"
+            },
+            {
+              "name": "Дренажный шланг",
+              "qty": 15,
+              "unit": "м"
+            }
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "case_id": "units-dotted",
+      "tags": [
+        "единицы"
+      ],
+      "scores": {
+        "json_valid": 1.0,
+        "items_overlap": 1.0,
+        "fields_match": 1.0
+      },
+      "latency_ms": 0.014899997040629387,
+      "cost_usd": 3.4949999999999996e-05,
+      "stability": null,
+      "outputs": [
+        {
+          "items": [
+            {
+              "name": "Воздуховод гибкий",
+              "qty": 12,
+              "unit": "м"
+            },
+            {
+              "name": "Хомут",
+              "qty": 24,
+              "unit": "шт"
+            },
+            {
+              "name": "Изолента",
+              "qty": 3,
+              "unit": "уп"
+            }
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "case_id": "after-total",
+      "tags": [
+        "структура"
+      ],
+      "scores": {
+        "json_valid": 1.0,
+        "items_overlap": 0.6666666666666666,
+        "fields_match": 0.6666666666666666
+      },
+      "latency_ms": 0.01170000177808106,
+      "cost_usd": 3.06e-05,
+      "stability": null,
+      "outputs": [
+        {
+          "items": [
+            {
+              "name": "Блок внутренний",
+              "qty": 6,
+              "unit": "шт"
+            },
+            {
+              "name": "Блок наружный",
+              "qty": 6,
+              "unit": "шт"
+            }
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "case_id": "fractional-qty",
+      "tags": [
+        "числа"
+      ],
+      "scores": {
+        "json_valid": 1.0,
+        "items_overlap": 0.6666666666666666,
+        "fields_match": 0.1111111111111111
+      },
+      "latency_ms": 0.010400006431154907,
+      "cost_usd": 2.685e-05,
+      "stability": null,
+      "outputs": [
+        {
+          "items": [
+            {
+              "name": "Кабель питания",
+              "qty": 18,
+              "unit": "м"
+            },
+            {
+              "name": "Клемма",
+              "qty": 8,
+              "unit": "шт"
+            }
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "case_id": "long-names",
+      "tags": [
+        "названия"
+      ],
+      "scores": {
+        "json_valid": 1.0,
+        "items_overlap": 1.0,
+        "fields_match": 1.0
+      },
+      "latency_ms": 0.015199999324977398,
+      "cost_usd": 5.13e-05,
+      "stability": null,
+      "outputs": [
+        {
+          "items": [
+            {
+              "name": "Кондиционер кассетный потолочный",
+              "qty": 2,
+              "unit": "шт"
+            },
+            {
+              "name": "Декоративная панель для кассетного блока",
+              "qty": 2,
+              "unit": "шт"
+            },
+            {
+              "name": "Помпа дренажная повышенной производительности",
+              "qty": 2,
+              "unit": "шт"
+            }
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "case_id": "bullets",
+      "tags": [
+        "структура"
+      ],
+      "scores": {
+        "json_valid": 1.0,
+        "items_overlap": 1.0,
+        "fields_match": 1.0
+      },
+      "latency_ms": 0.012299991794861853,
+      "cost_usd": 3.915e-05,
+      "stability": null,
+      "outputs": [
+        {
+          "items": [
+            {
+              "name": "Вентилятор канальный",
+              "qty": 3,
+              "unit": "шт"
+            },
+            {
+              "name": "Решётка вентиляционная",
+              "qty": 9,
+              "unit": "шт"
+            },
+            {
+              "name": "Шумоглушитель",
+              "qty": 3,
+              "unit": "шт"
+            }
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "case_id": "mixed-units",
+      "tags": [
+        "единицы"
+      ],
+      "scores": {
+        "json_valid": 1.0,
+        "items_overlap": 0.6666666666666666,
+        "fields_match": 0.0
+      },
+      "latency_ms": 0.01030000566970557,
+      "cost_usd": 2.8349999999999998e-05,
+      "stability": null,
+      "outputs": [
+        {
+          "items": [
+            {
+              "name": "Монтажный комплект",
+              "qty": 5,
+              "unit": "компл"
+            },
+            {
+              "name": "Крепёж",
+              "qty": 40,
+              "unit": "шт"
+            }
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "case_id": "one-item",
+      "tags": [
+        "простое"
+      ],
+      "scores": {
+        "json_valid": 1.0,
+        "items_overlap": 1.0,
+        "fields_match": 1.0
+      },
+      "latency_ms": 0.007800001185387373,
+      "cost_usd": 2.07e-05,
+      "stability": null,
+      "outputs": [
+        {
+          "items": [
+            {
+              "name": "Тепловая завеса",
+              "qty": 1,
+              "unit": "шт"
+            }
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "case_id": "noise-around",
+      "tags": [
+        "шум"
+      ],
+      "scores": {
+        "json_valid": 1.0,
+        "items_overlap": 1.0,
+        "fields_match": 1.0
+      },
+      "latency_ms": 0.014699995517730713,
+      "cost_usd": 3.5850000000000004e-05,
+      "stability": null,
+      "outputs": [
+        {
+          "items": [
+            {
+              "name": "Увлажнитель промышленный",
+              "qty": 2,
+              "unit": "шт"
+            },
+            {
+              "name": "Фильтр сменный",
+              "qty": 10,
+              "unit": "шт"
+            }
+          ]
+        }
+      ],
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+name: extract_items
+task: examples.extract_items.task:run
+dataset: dataset.jsonl
+
+# Повторы нужны, когда у модели ненулевая температура: харнесс посчитает,
+# насколько ответы расходятся между собой.
+repeats: 1
+
+metrics:
+  - type: json_valid
+  - type: set_overlap
+    field: items
+    name: items_overlap
+  - type: fields_match
+    name: fields_match
+    field: items
+    fields: [name, qty, unit]
+
+# Для задержки, стоимости и ошибок порог означает «не выше»,
+# для остальных — «не ниже».
+thresholds:
+  json_valid: 1.0
+  items_overlap: 0.9
+  p95_latency_ms: 3000
+  cost_per_case_usd: 0.01
+  errors: 0
+
+# Цены в долларах за миллион токенов.
+pricing:
+  demo-v1: {input: 0.15, output: 0.60}
+  demo-v2: {input: 0.15, output: 0.60}
+  gpt-4o-mini: {input: 0.15, output: 0.60}
